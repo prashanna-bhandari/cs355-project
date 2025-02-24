@@ -1,9 +1,10 @@
-/* Overall body layout */
+/* Global Layout */
 body {
   margin: 0;
   padding: 0;
   color: rgb(34, 34, 34);
   background-color: #f8f9fa;
+  font-family: "Lexend", sans-serif;
 }
 
 html {
@@ -11,15 +12,11 @@ html {
   box-sizing: border-box;
 }
 
-
-/* size of the container, we can adjust it later */
 .container {
-  width: 90%;
-  max-width: 100%;
-  padding: 0;
+  max-width: 1200px;
   margin: 0 auto;
-  background-color: aqua; /* I'm going to remove it later; it's just for alignment for now*/
-  overflow: hidden;
+  padding: 30px 20px;
+  box-sizing: border-box;
 }
 
 /* header logo + icon */
@@ -27,36 +24,37 @@ html {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 0px;
-  height: 100px;
-
-  position: sticky;
+  padding: 0 20px;
+  height: 80px;
+  width: 100%;
+  position: fixed;
   top: 0;
   left: 0;
-  z-index: 200;
-  transition: transform 0.3s ease-in-out;
-}
-
-.header h6 {
-  font-family: "Lexend", sans-serif;
-  font-weight: 100 !important;
-  margin-left: auto;
-  margin-top: 15px;
-  justify-content: center;
+  background-color: white;
+  z-index: 1000;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .header h1 {
-  font-family: "Lexend", sans-serif;
   font-weight: 700;
   flex-grow: 1;
   text-align: center;
+}
+
+.header h1 a {
+  text-decoration: none;
+  color: rgb(34, 34, 34);
+  transition: color 0.2s ease-in-out;
+}
+
+.header h1 a:hover {
+  color: rgb(0, 0, 0);
 }
 
 .header-icon {
   display: flex;
   gap: 25px;
   align-items: center;
-  justify-content: center;
 }
 
 .header-icon svg {
@@ -70,16 +68,19 @@ html {
   transform: scale(1.1);
 }
 
-/* second header with item */
+/* second header with items  */
 .nav-bar {
   display: flex;
-  flex-direction: row;
-  align-items: start;
-  padding: 0 0px;
-  font-family: "Lexend", sans-serif;
-  font-weight: 200;
-  box-sizing: border-box;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: fixed;
+  top: 80px;
+  left: 0;
+  background-color: white;
+  z-index: 999;
+  padding: 10px 0;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.05);
 }
 
 .nav-bar ul {
@@ -87,7 +88,7 @@ html {
   gap: 1rem;
   list-style: none;
   margin: 0;
-  padding: 0 0px;
+  padding: 0;
 }
 
 .nav-bar li {
@@ -104,4 +105,224 @@ html {
 
 .nav-bar li span {
   color: red;
+}
+
+/* Hero Section */
+.hero {
+  background: url("./images/tops/IMG-20250221-WA0002.jpg") center/cover;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  margin-top: 150px;
+}
+
+.hero-content {
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 600px;
+  width: 90%;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.btn {
+  border: 1px solid;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 5px;
+}
+
+/* Shop by Category */
+.featured-categories {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.featured-categories h2 {
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 30px;
+  color: #222;
+}
+
+.featured-categories a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.category-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.category-item {
+  text-align: center;
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  width: 140px;
+  height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+}
+
+.category-item img {
+  width: 140px;
+  height: 120px;
+  max-width: 200px;
+  object-fit: contain;
+  border-radius: 15px;
+  background-color: transparent;
+}
+.category-item span {
+  display: block;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-top: 10px;
+  color: #222;
+}
+
+.category-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 12px rgba(196, 50, 50, 0.15);
+}
+
+/* 
+best seller */
+.best-sellers {
+  text-align: center;
+  padding: 40px 20px;
+  margin-top: 70px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.product-card {
+  background: white;
+  padding: 15px;
+  border-radius: 18px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.product-card img {
+  width: 100%;
+  height: auto;
+  max-width: 350px;
+  border-radius: 15px;
+  object-fit: cover;
+  transition: transform 0.2s ease-in-out;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 12px rgba(121, 56, 56, 0.192);
+}
+
+.product-card figcaption {
+  font-size: 16px;
+  font-weight: 400;
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* footer/testimonials */
+.testimonials {
+  text-align: center;
+  padding: 60px 20px;
+  background: #f3f3f3;
+  margin-top: 12rem;
+}
+
+.testimonials h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 20px;
+}
+
+.testimonials p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.testimonial-card {
+  background: white;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.testimonial-card img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  object-fit: cover;
+  border: 2px solid #ddd;
+}
+
+.testimonial-card p {
+  font-size: 1rem;
+  color: #444;
+  font-style: italic;
+  margin-bottom: 15px;
+}
+
+.testimonial-card h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 5px;
+}
+
+.testimonial-card span {
+  font-size: 0.9rem;
+  color: #777;
 }

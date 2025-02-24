@@ -1,29 +1,172 @@
-.jeans, .coats, .tops {
-    width: 90%;
-    max-width: 100%;
-    padding: 0;
-    margin: 0 auto;
-    overflow: hidden;
-  }
-  table {
-    table-layout: fixed;
-    width: 100%;
-  }
-  table td{
-    border: 1px solid black;
-    text-align: center;
-  }
-  figure {
-      display: inline-block;
-      border: 1px dotted gray;
-      margin: 20px; /* adjust as needed */
-  }
-  figure img {
-    height: 150px;
-    width: 150px;
-    vertical-align: top;
-  }
-  figure figcaption {
-      border: 1px solid black;
-      text-align: center;
-  }
+/* Global Layout */
+body {
+  margin: 0;
+  padding: 0;
+  color: rgb(34, 34, 34);
+  background-color: #f8f9fa;
+  font-family: "Lexend", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+/* Main Body Container */
+.container-body-m {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  padding: 30px 0;
+  overflow: hidden;
+  box-sizing: border-box;
+  gap: 10px;
+  margin-top: 170px;
+  position: relative;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+/*  header logo + icon */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  height: 80px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: white;
+  z-index: 1000;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.header h1 {
+  font-family: "Lexend", sans-serif;
+  font-weight: 700;
+  flex-grow: 1;
+  text-align: center;
+}
+
+.header h1 a {
+  text-decoration: none;
+  color: rgb(34, 34, 34);
+  transition: color 0.2s ease-in-out;
+}
+
+.header h1 a:hover {
+  color: rgb(0, 0, 0);
+}
+
+.header-icon {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-icon svg {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.header-icon svg:hover {
+  transform: scale(1.1);
+}
+
+/* second header with items */
+.nav-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: fixed;
+  top: 80px;
+  left: 0;
+  background-color: white;
+  z-index: 999;
+  padding: 10px 0;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.nav-bar ul {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-bar li {
+  list-style: none;
+}
+
+.nav-bar a {
+  font-weight: 200;
+  text-decoration: none;
+  color: black;
+  font-size: 14px;
+  transition: color 0.2s ease-in-out;
+}
+
+.nav-bar li span {
+  color: red;
+}
+
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: white;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0px 4px 8px rgba(255, 134, 134, 0.123);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  width: 100%;
+  max-width: 300px;
+}
+
+.product-card img {
+  width: 100%;
+  height: auto;
+  max-width: 250px;
+  border-radius: 5px;
+  object-fit: cover;
+  transition: transform 0.2s ease-in-out;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.product-card img:hover {
+  transform: scale(1.05);
+}
+
+.product-card figcaption {
+  font-size: 16px;
+  font-weight: 400;
+  color: rgb(34, 34, 34);
+  margin-top: 10px;
+  text-align: center;
+}
+
+

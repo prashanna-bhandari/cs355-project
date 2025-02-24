@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>FARFETCH</title>
 
     <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -28,7 +28,7 @@
     <div class="container">
       <!-- header logo + icon -->
       <header class="header">
-              <h6>Womenswear</h6>
+        <h6>Womenswear</h6>
         <h1>FARFETCH</h1>
         <div class="header-icon">
           <svg
@@ -73,21 +73,115 @@
 
       <!-- second header with items -->
       <div class="nav-bar">
-              <ul>
-                <li><a href="#">New in</a></li>
-                <li><a href="#">Best Sellers</a></li>
-                <li><a href="#">Jeans</a></li>
-                <li><a href="#">Tops</a></li>
-                <li><a href="#">Coats</a></li>
-                <li><a href="#"> <span>Sale</span></a></li>
-              </ul>
-            </div>
+        <ul>
+          <li><a href="./new-in.html">New in</a></li>
+          <li><a href="./bestseller.html">Best Sellers</a></li>
+          <li><a href="./jeans.html">Jeans</a></li>
+          <li><a href="./tops.html">Tops</a></li>
+          <li><a href="./coats.html">Coats</a></li>
+          <li>
+            <a href="./sale.html"> <span>Sale</span></a>
+          </li>
+        </ul>
+      </div>
 
       <!-- main body content -->
-      <section class="container body-m"></section>
+      <section class="container body-m">
+        <section class="hero">
+          <div class="hero-content">
+            <h1>Discover the Latest Trends</h1>
+            <p>Shop the best in fashion with our exclusive collections.</p>
+            <a href="./new-in.html" class="btn">Shop Now</a>
+          </div>
+        </section>
+
+        <section class="featured-categories">
+          <h2>Shop by Category</h2>
+          <div class="category-grid">
+            <div class="category-item">
+              <a href="./tops.html">
+                <img src="./images/tops/IMG-20250221-WA0002.jpg" alt="" />
+                <span>Tops</span>
+              </a>
+            </div>
+            <div class="category-item">
+              <a href="./jeans.html">
+                <img src="./images/Jeans/IMG-20250221-WA0007.jpg" alt="" />
+                <span>Jeans</span>
+              </a>
+            </div>
+            <div class="category-item">
+              <a href="./coats.html">
+                <img src="./images/Blazers/IMG-20250221-WA0021.jpg" alt="" />
+                <span>Coats</span>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <section class="best-sellers">
+          <h2>Best Sellers</h2>
+          <div class="product-grid">
+            <div class="product-card">
+              <img
+                src="./images/tops/IMG-20250221-WA0002.jpg"
+                alt="Winter Coat"
+              />
+              <figcaption>Stylish Top</figcaption>
+            </div>
+            <div class="product-card">
+              <img
+                src="./images/Jeans/IMG-20250221-WA0007.jpg"
+                alt="Formal Coat"
+              />
+              <figcaption>Stylish Jeans</figcaption>
+            </div>
+          </div>
+          <a href="./bestseller.html" class="btn">View More</a>
+        </section>
+      </section>
 
       <!-- footer -->
-      <section class="footer"></section>
+      <section class="footer">
+        <section class="testimonials">
+          <h2>What Our Customers Say</h2>
+          <p>Real reviews from our satisfied customers.</p>
+
+          <div class="testimonial-grid">
+            <div class="testimonial-card">
+              <img
+                src="images/tops/IMG-20250221-WA0003.jpg"
+                alt="Customer Photo"
+              />
+              <p>
+                "Absolutely love the quality of the products! Highly recommend."
+              </p>
+              <h4>Emily Johnson</h4>
+              <span>Verified Buyer</span>
+            </div>
+
+            <div class="testimonial-card">
+              <img
+                src="images/tops/IMG-20250221-WA0003.jpg"
+                alt="Customer Photo"
+              />
+              <p>"Fast delivery and amazing customer service. 5 stars!"</p>
+              <h4>Michael Smith</h4>
+              <span>Frequent Shopper</span>
+            </div>
+
+            <div class="testimonial-card">
+              <img
+                src="images/tops/IMG-20250221-WA0003.jpg"
+                alt="Customer Photo"
+              />
+              <p>"Stylish and comfortable! Will definitely shop again."</p>
+              <h4>Sophia Martinez</h4>
+              <span>Fashion Enthusiast</span>
+            </div>
+          </div>
+        </section>
+      </section>
     </div>
 
     <!-- Bootstrap JS -->
