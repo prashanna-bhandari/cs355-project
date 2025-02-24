@@ -1,0 +1,29 @@
+.jeans, .coats, .tops {
+    width: 90%;
+    max-width: 100%;
+    padding: 0;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  table {
+    table-layout: fixed;
+    width: 100%;
+  }
+  table td{
+    border: 1px solid black;
+    text-align: center;
+  }
+  figure {
+      display: inline-block;
+      border: 1px dotted gray;
+      margin: 20px; /* adjust as needed */
+  }
+  figure img {
+    height: 150px;
+    width: 150px;
+    vertical-align: top;
+  }
+  figure figcaption {
+      border: 1px solid black;
+      text-align: center;
+  }
