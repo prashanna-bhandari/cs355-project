@@ -15,9 +15,9 @@ This is a frontend-only fashion e-commerce website inspired by FARFETCH. The pro
 - **Responsive Design**: Optimized for mobile and desktop viewing.
 
 ## Technologies Used
-- **HTML5**
-- **CSS3**
-- **JavaScript (ES6)**
+- **HTML**
+- **CSS**
+- **JavaScript**
 - **Google Fonts (Lexend, Nunito Sans)**
 
 ## Future Improvements
