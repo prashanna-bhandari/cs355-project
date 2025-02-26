@@ -68,6 +68,41 @@ html {
   transform: scale(1.1);
 }
 
+.search-btn {
+  background: none;
+    border: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    height: 40px
+}
+.search-btn svg {
+  width: 24px; 
+  height: 24px;
+  fill: black; 
+}
+.search-input {
+  display: none; 
+  width: 150px;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  outline: none;
+  transition: width 0.3s ease-in-out;
+}
+.search-input.active{
+  display:block;
+}
+.search-btn:hover svg {
+  fill: gray; 
+  transform: scale(1.1); 
+  transition: all 0.2s ease-in-out;
+}
+
+
 /* second header with items  */
 .nav-bar {
   display: flex;
