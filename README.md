@@ -1,7 +1,7 @@
 # Fashion E-commerce Website
 
 ## Overview
-This is a frontend-only fashion e-commerce website inspired by FARFETCH. The project includes product pages, a best sellers section, and smooth page navigation. The website is built using **HTML, CSS, and JavaScript**, following best practices in responsive web design.
+This is a frontend-only fashion e-commerce website. The project includes product pages, a best sellers section, and smooth page navigation. The website is built using **HTML, CSS, and JavaScript**, following best practices in responsive web design.
 
 ## Features
 - **Sticky Header & Navbar**: Ensures easy navigation across the website.
