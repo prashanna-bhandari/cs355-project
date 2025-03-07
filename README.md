@@ -2,6 +2,7 @@
 
 ## Overview
 This is a frontend-only fashion e-commerce website. The project includes product pages, a best sellers section, and smooth page navigation. The website is built using **HTML, CSS, and JavaScript**, following best practices in responsive web design.
+## Live Demo - https://arvyandlula-womenswear.vercel.app/
 
 ## Features
 - **Sticky Header & Navbar**: Ensures easy navigation across the website.
